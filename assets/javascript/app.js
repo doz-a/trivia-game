@@ -3,10 +3,10 @@ $(document).ready(function () {
     // Correct guesses
     // Incorrect guesses
 
-    // Timer for the page, 30 seconds total atm about 15 secs per question
-    var sec = 200;
+    // Timer for the page, 200 seconds total atm about 15 secs per question
+    var sec = 5;
     var time = setInterval(myTimer, 1000);
-    // var quizContainer =
+
     var quizContainer = document.getElementById("question");
     var resultsContainer = document.getElementById('results');
     var submitButton = document.getElementById('submit');
@@ -15,11 +15,16 @@ $(document).ready(function () {
     function myTimer() {
         document.getElementById('timer').innerHTML = sec + " seconds left!";
         sec--;
+
+        // Timeout 
         if (sec == -1) {
             clearInterval(time);
+
+            // Text into timer div 
             document.getElementById("timer").innerHTML = "Time is up :(";
-            // Insert reset here 
-            // Insert code for timeout
+
+            // Shows results 
+            showResults(questions, quizContainer, resultsContainer);
         }
     }
 
@@ -211,13 +216,11 @@ $(document).ready(function () {
             }
         }
         // Display correct answers out of total
-        resultsContainer.innerHTML = numCorrect + "out of " + questions.length
+        resultsContainer.innerHTML = "Your score was " + numCorrect + " out of " + questions.length + "!"
     }
 
     // Click on submit button, shows results 
     submitButton.onclick = function () {
         showResults(questions, quizContainer, resultsContainer);
     }
-    // When game ends, it shows the correct guesses and incorrect guesses amount
-    // Reset game function shows beginning correct guesses reset, incorrect guesses reset, timer reset
 })
