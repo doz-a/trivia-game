@@ -2,6 +2,7 @@
 permalink: /index.html
 ---
 
+Radio buttons only allow user to select one button at a time
 
 * You'll create a trivia form with multiple choice or true/false options (your choice).
 
