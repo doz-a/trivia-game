@@ -1,24 +1,63 @@
 $(document).ready(function () {
-
-    // Start button that initiates game, when clicked opens questions screen
-    // Questions screen gives options for player to click, 4 clickable buttons
-
-
+    // Needed variables
     // Correct guesses
-    // Incorrect guesses increase when question wrong, or if player times out
+    // Incorrect guesses
 
-    // Timer for 20 seconds each question
-    // Timer for pause to view correct answer 
+    // Timer for the page 
+    var sec = 30;
+    var time = setInterval(myTimer, 1000);
+
+    function myTimer() {
+        document.getElementById('timer').innerHTML = sec + " seconds left!";
+        sec--;
+        if (sec == -1) {
+            clearInterval(time);
+            document.getElementById("timer").text("Time is up :(")
+        }
+    }
+
+    // Object with questions, possible answers, correct answer 
+    // Questions object
+    // var questions = [
+    //     // Begin Q1 
+    //     {
+    //         question: "How long do cats sleep per day?",
+    //         answers: {
+    //             a: "ALL day",
+    //             b: "Only after they eat",
+    //             c: "Right until before their owner gets home",
+    //             d: "6 hours",
+    //         },
+    //         correctAnswer: "a"
+
+    //     },
+    //     // End Q1 
+
+    //     // Begin Q2 
+    //     {
+    //         question: "How many feral cats live in the United States?",
+    //         answers: {
+    //             a: "10 million",
+    //             b: "100 thousand",
+    //             c: "700 million",
+    //             d: "50 thousand",
+    //         },
+    //         correctAnswer: "c"
+
+    //     },
+    //     // End Q2 
+    // ];
+
+    // Function that shows question to the html with possible answers
+
+    // Code for timeout
+
+    // Questions screen gives options for player to click, 4 clickable buttons
 
     // 10 questions
 
-    // Win screen shows correct guesses, incorrect guesses
-    // Lose screen if player times out, or if player chooses incorrectly
+    // When game extends, it shows the correct guesses and incorrect guesses amount
 
-    // Reset game shows beginning of start button, correct guesses reset, incorrect guesses reset
-
-
-
-
+    // Reset game function shows beginning correct guesses reset, incorrect guesses reset, timer reset
 
 })
