@@ -3,7 +3,7 @@ $(document).ready(function () {
     // Correct guesses
     // Incorrect guesses
 
-    // Timer for the page, 200 seconds total atm about 15 secs per question
+    // Timer for the page, 200 seconds total atm about 20 secs per question
     var sec = 200;
     var time = setInterval(myTimer, 1000);
 
@@ -160,7 +160,7 @@ $(document).ready(function () {
         {
             question: "What does it mean when a cat rubs its body or face on you?",
             answers: {
-                a: "She loves you and is attempting to mark you with its pheremones to show that you are part of her pack",
+                a: "She is attempting to mark you with its pheremones to show that you are part of her pack",
                 b: "She's using you as a napkin, wiping off the blood of the animals it has killed",
                 c: "She wants to camouflage her scent using yours",
                 d: "She's trying to transfer fleas to your body",
@@ -179,16 +179,16 @@ $(document).ready(function () {
         var output = [];
         var answers;
 
-        // Make box for each question
+        // For each question
         for (var i = 0; i < questions.length; i++) {
 
-            // first reset the list of answers
+            //Reset the list of answers
             answers = [];
 
             // Create radio button for each answer
             for (letter in questions[i].answers) {
 
-                // HTML radio button with labels and line breaks
+                // HTML radio button with labels and line breaks, assigns a letter to each button
                 answers.push(
                     "<br>"
                     + "<label>"
