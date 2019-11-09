@@ -1,0 +1,41 @@
+/* Sets background  */
+
+body {
+    background-image: url(../images/catBackground.jpg);
+    display: flex;
+    color: white;
+    text-align: left;
+}
+
+/* Main container holding column of text  */
+
+.container {
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+}
+
+/* Kitty Questions Header  */
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+/* Makes questions align left in container */
+
+label {
+    text-align: left;
+}
+
+/* Timer div styling */
+
+#timer {
+    text-align: center;
+}
+
+hr {
+    border-top: 1px solid rgba(255, 255, 255, .5);
+}

@@ -4,7 +4,7 @@ $(document).ready(function () {
     // Incorrect guesses
 
     // Timer for the page, 200 seconds total atm about 15 secs per question
-    var sec = 5;
+    var sec = 200;
     var time = setInterval(myTimer, 1000);
 
     var quizContainer = document.getElementById("question");
@@ -62,10 +62,10 @@ $(document).ready(function () {
         {
             question: "How many bones do cats have?",
             answers: {
-                a: "150",
-                b: "800",
-                c: "60",
-                d: "230",
+                a: "319, just like doggos",
+                b: "351, just as many as an elephant",
+                c: "70, 10 more than turtles",
+                d: "230, 20 more than humans",
             },
             correctAnswer: "d"
 
@@ -76,9 +76,9 @@ $(document).ready(function () {
         {
             question: "What effect does catnip have on cats?",
             answers: {
-                a: "Makes them tired",
+                a: "It makes them sweepy",
                 b: "Affects them in similar ways marijuana or LSD do in humans",
-                c: "Makes them hungry",
+                c: "Makes them hangry",
                 d: "Affects their appetite to release less hunger hormones",
             },
             correctAnswer: "b"
@@ -93,7 +93,7 @@ $(document).ready(function () {
                 a: "Tigers",
                 b: "Panthers",
                 c: "Lions",
-                d: "Leopards",
+                d: "Turtles",
             },
             correctAnswer: "a"
 
@@ -116,31 +116,59 @@ $(document).ready(function () {
 
         // Begin Q7 
         {
-            question: "How many feral cats live in the United States?",
+            question: "What is your cat indicating when she lightly bites you without breaking your skin?",
             answers: {
-                a: "10 million",
-                b: "100 thousand",
-                c: "700 million",
-                d: "50 thousand",
+                a: "She is angry with you",
+                b: "She wants you to give her attention",
+                c: "sHe NeEdS tO bE fEd",
+                d: "She wants to show you that she loves you",
             },
-            correctAnswer: "c"
+            correctAnswer: "d"
 
         },
         // End Q7 
 
         // Begin Q8 
         {
-            question: "How many feral cats live in the United States?",
+            question: "How many toes do cats have?",
             answers: {
-                a: "10 million",
-                b: "100 thousand",
-                c: "700 million",
-                d: "50 thousand",
+                a: "18 toes 5 on each front and 4 on each back paw",
+                b: "20 toes 5 on each paw",
+                c: "10 toes 10 paws",
+                d: "16 toes 4 on each paw",
             },
-            correctAnswer: "c"
+            correctAnswer: "a"
 
         },
         // End Q8 
+
+        // Begin Q9
+        {
+            question: "What animal has better hearing than cats?",
+            answers: {
+                a: "Dogs",
+                b: "Humans",
+                c: "Turtles",
+                d: "None of the above, cats are the best",
+            },
+            correctAnswer: "d"
+
+        },
+        // End Q9
+
+        // Begin Q10
+        {
+            question: "What does it mean when a cat rubs its body or face on you?",
+            answers: {
+                a: "She loves you and is attempting to mark you with its pheremones to show that you are part of her pack",
+                b: "She's using you as a napkin, wiping off the blood of the animals it has killed",
+                c: "She wants to camouflage her scent using yours",
+                d: "She's trying to transfer fleas to your body",
+            },
+            correctAnswer: "a"
+
+        },
+        // End Q10
     ];
     // End questions 
 
@@ -173,12 +201,12 @@ $(document).ready(function () {
 
             // Add this question and its answers to the output array
             output.push(
-                "<div class='question'>" + questions[i].question + "</div>"
+                "<hr>" + "<div class='question'>" + questions[i].question + "</div>"
                 + "<div class='answers'>" + answers.join("") + "</div>"
             );
         }
 
-        // finally combine our output list into one string of html and put it on the page
+        // Finally combine our output list into one string of html and put it on the page
         quizContainer.innerHTML = output.join("");
     }
     // End show questions function 
